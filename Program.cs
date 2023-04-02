@@ -1,20 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
+using PlatformService.Data.Repos;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+        
         var builder = WebApplication.CreateBuilder(args);
 
-        // Add services to the container.
-
         builder.Services.AddControllers();
-        // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen();
         builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDB"));
-
+        builder.Services.AddScoped<IPlatformRepo, PlatfromRepo>();
+        
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.
@@ -29,7 +29,7 @@ internal class Program
         app.UseAuthorization();
 
         app.MapControllers();
-
+        app.DbPreparor();
         app.Run();
     }
 }
