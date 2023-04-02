@@ -14,7 +14,7 @@ internal class Program
         builder.Services.AddSwaggerGen();
         builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDB"));
         builder.Services.AddScoped<IPlatformRepo, PlatfromRepo>();
-        
+        builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         var app = builder.Build();
 
         // Configure the HTTP request pipeline.

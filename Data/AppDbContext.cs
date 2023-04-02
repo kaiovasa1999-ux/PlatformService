@@ -10,7 +10,5 @@ namespace PlatformService.Data
 
 
         public DbSet<Platform> Platforms { get; set; }
-
-
     }
 }
