@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 using PlatformService.Data.Repos;
+using PlatformService.SyncDataServices.HttpClients;
 
 internal class Program
 {
@@ -15,6 +16,7 @@ internal class Program
         builder.Services.AddDbContext<AppDbContext>(options => options.UseInMemoryDatabase("InMemoryDB"));
         builder.Services.AddScoped<IPlatformRepo, PlatfromRepo>();
         builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+        builder.Services.AddHttpClient<ICommandDataClient, HttpCommandDataClient>();
         var app = builder.Build();
          
         // Configure the HTTP request pipeline.
