@@ -19,8 +19,7 @@ namespace PlatformService.SyncDataServices.HttpClients
             var httpContent = new StringContent(
                 JsonSerializer.Serialize(data),
                 Encoding.UTF8,
-                "application.json");
-
+                "application/json");
             //will put this URI to config
             var response = await _httpClient.PostAsync($"{_configuration["CommandServiceURL"]}", httpContent);
         

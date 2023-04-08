@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using PlatformService.Data.Repos;
 using PlatformService.DTOs;
 using PlatformService.Models;
+using PlatformService.SyncDataServices.HttpClients;
 
 namespace PlatformService.Controllers
 {
@@ -12,11 +13,16 @@ namespace PlatformService.Controllers
     {
         private readonly IPlatformRepo _platformRepo;
         private readonly IMapper _mapper;
+        private readonly ICommandDataClient _commandDataClient;
 
-        public PlatfromsController(IPlatformRepo platformRepo, IMapper mapper)
+        public PlatfromsController(
+            IPlatformRepo platformRepo, 
+            IMapper mapper,
+            ICommandDataClient commandDataClient)
         {
             _platformRepo = platformRepo;
             _mapper = mapper;
+            _commandDataClient = commandDataClient;
         }
 
         [HttpGet]
@@ -40,7 +46,7 @@ namespace PlatformService.Controllers
         }
 
         [HttpPost]
-        public ActionResult<PlatfromReadDTO> CreatePlatform(PlatfromCreateDTO platfromCreateDTO)
+        public async Task<ActionResult<PlatfromReadDTO>> CreatePlatform(PlatfromCreateDTO platfromCreateDTO)
         {
             var platfromModel = _mapper.Map<Platform>(platfromCreateDTO);
             if(platfromModel != null)
@@ -49,7 +55,14 @@ namespace PlatformService.Controllers
                 _platformRepo.SaveChanges();
                 var platformReadDTO = _mapper.Map<PlatfromReadDTO>(platfromModel);
 
-                var x = _platformRepo.GetAllPlatforms();
+                try
+                {
+                    await _commandDataClient.SendPlatformToCommandService(platformReadDTO);
+                }
+                catch (Exception ex)
+                {
+                    await Console.Out.WriteLineAsync($"Occur a problem while createing the platfomr!!!{ex.Message}");
+                }
 
                 return CreatedAtRoute(nameof(GetplafromById),new {Id = platformReadDTO.Id}, platformReadDTO);
             }
