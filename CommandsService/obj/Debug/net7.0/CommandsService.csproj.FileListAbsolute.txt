@@ -1,3 +1,10 @@
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.csproj.AssemblyReference.cache
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.AssemblyInfoInputs.cache
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.AssemblyInfo.cs
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.csproj.CoreCompileInputs.cache
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\appsettings.json
 C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\CommandsService.exe
@@ -21,13 +28,6 @@ C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\Swashbuckle.AspNetC
 C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\vesel\source\repos\CommandsService\bin\Debug\net7.0\System.CodeDom.dll
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.csproj.AssemblyReference.cache
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.AssemblyInfoInputs.cache
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.AssemblyInfo.cs
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.csproj.CoreCompileInputs.cache
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\CommandsService.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\staticwebassets\msbuild.CommandsService.Microsoft.AspNetCore.StaticWebAssets.props
 C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\staticwebassets\msbuild.build.CommandsService.props
 C:\Users\vesel\source\repos\CommandsService\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.CommandsService.props
