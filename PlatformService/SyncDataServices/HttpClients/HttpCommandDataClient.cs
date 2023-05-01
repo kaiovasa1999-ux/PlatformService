@@ -22,7 +22,7 @@ namespace PlatformService.SyncDataServices.HttpClients
                 "application/json");
             //will put this URI to config
             var response = await _httpClient.PostAsync($"{_configuration["CommandServiceURL"]}", httpContent);
-        
+         
             if(response.IsSuccessStatusCode)
             {
                 Console.WriteLine("Everything was OK!");
